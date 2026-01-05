@@ -76,6 +76,8 @@ Route::group([
     Route::post('/me',      [AuthController::class, 'me'])->middleware('auth:api')->name('me');
 
     Route::get('/listUser',[AuthController::class, 'listUser'])->middleware('auth:api')->name('listUser');
+    Route::get('/listPost',[AuthController::class, 'listPost'])->middleware('auth:api')->name('listPost');
+    Route::get('/Poste', [PosteController::class, 'index'])->middleware('auth:api')->name('listPoste');
 });
 
 /*

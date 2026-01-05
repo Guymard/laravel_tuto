@@ -29,6 +29,7 @@ class CreationPosteRequest extends FormRequest
             'titre' => 'required'
         ];
     }
+    
     public function failedValidation(Validator $validator)
     {
         // la reponse pour les utilisateurs de l'API

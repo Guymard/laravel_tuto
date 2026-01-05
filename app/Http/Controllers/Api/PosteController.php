@@ -12,6 +12,13 @@ use Illuminate\Http\Request;
 
 class PosteController extends Controller
 {
+
+    public function listPost(Request $request)
+    {
+        //liste des utilisateurs 
+        return response()->json(Poste::all());
+    }
+    
     public function index()
     {
       /*
