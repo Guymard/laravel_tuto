@@ -15,7 +15,7 @@ class PosteController extends Controller
 
     public function listPost(Request $request)
     {
-        //liste des utilisateurs 
+        //liste des postes 
         return response()->json(Poste::all());
     }
     

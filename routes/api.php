@@ -29,7 +29,7 @@ use App\Http\Controllers\AuthController;
 //Route::put('Poste/edit/{id}',[PosteController::class, "update"]);
 
 
-
+Route::get('/listPost',[PosteController::class, 'listPost']);
 
 /*
 Route::get('/hello', function (Request $request){
@@ -76,8 +76,9 @@ Route::group([
     Route::post('/me',      [AuthController::class, 'me'])->middleware('auth:api')->name('me');
 
     Route::get('/listUser',[AuthController::class, 'listUser'])->middleware('auth:api')->name('listUser');
-    Route::get('/listPost',[AuthController::class, 'listPost'])->middleware('auth:api')->name('listPost');
-    Route::get('/Poste', [PosteController::class, 'index'])->middleware('auth:api')->name('listPoste');
+
+  //  Route::get('/listPost',[PosteController::class, 'listPost'])->middleware('auth:api')->name('listPost');
+    Route::get('/Poste',   [PosteController::class, 'index'])->middleware('auth:api')->name('listPoste');
 });
 
 /*
