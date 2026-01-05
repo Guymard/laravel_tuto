@@ -18,6 +18,12 @@ class PosteController extends Controller
         //liste des postes 
         return response()->json(Poste::all());
     }
+
+    public function mespostes(PosteController $request)
+    {
+        //liste des postes 
+        return response()->json(Poste::all());
+    }
     
     public function index()
     {
