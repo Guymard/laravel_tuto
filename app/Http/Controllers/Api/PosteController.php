@@ -24,6 +24,13 @@ class PosteController extends Controller
         //liste des postes 
         return response()->json(Poste::all());
     }
+
+    public function show($id)
+    {
+        //Recuperer un poste par son id
+        $poste = Poste::find($id);
+        return response()->json($poste);
+    }
     
     public function index()
     {
