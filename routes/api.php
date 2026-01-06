@@ -33,6 +33,7 @@ Route::get('/listPost',[PosteController::class, 'listPost']);
 
 
 
+
 /*
 Route::get('/hello', function (Request $request){
     //return response()->json(['message' => 'API is working']);
@@ -79,7 +80,7 @@ Route::group([
 
     Route::get('/listUser',[AuthController::class, 'listUser'])->middleware('auth:api')->name('listUser');
 
-    Route::get('/mespostes',[PosteController::class, 'mespostes'])->name('mespostes');
+    Route::get('/mespostes',[PosteController::class, 'mespostes'])->middleware('auth:api')->name('mespostes');
 
   //  Route::get('/listPost',[PosteController::class, 'listPost'])->middleware('auth:api')->name('listPost');
     Route::get('/Poste',   [PosteController::class, 'index'])->middleware('auth:api')->name('listPoste');
